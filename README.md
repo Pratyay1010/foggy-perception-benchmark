@@ -6,7 +6,7 @@ Robust object detection under adverse weather conditions using CNN-based, transf
   <img src="assets/detections/yolo_results.png" width="750"/>
 </p>
 
----
+
 
 # Motivation
 
@@ -20,7 +20,7 @@ This project explores the robustness of modern detection paradigms under foggy u
 
 The goal is not only to compare architectures, but also to understand how different perception paradigms behave under visibility degradation.
 
----
+
 
 # Project Overview
 
@@ -29,12 +29,12 @@ This repository benchmarks multiple modern object detection approaches on the Fo
 The project is structured as a progressive perception pipeline:
 
 | Stage | Method | Paradigm |
-|---|---|---|
+||||
 | Stage 1 | YOLO | CNN-based Detection |
 | Stage 2 | Deformable DETR | Transformer-based Detection |
 | Stage 3 | Grounding DINO | Open-Vocabulary Detection |
 
----
+
 
 # Repository Structure
 
@@ -62,7 +62,7 @@ foggy-perception-benchmark/
 └── README.md
 ```
 
----
+
 
 # Dataset
 
@@ -84,7 +84,7 @@ Target classes include:
 - motorcycle
 - train
 
----
+
 
 # Methodology
 
@@ -103,7 +103,7 @@ A YOLO-based detector was trained as the primary CNN baseline.
 - evaluate localization quality under fog
 - compare against transformer methods
 
----
+
 
 ## 2. Deformable DETR (Transformer)
 
@@ -112,7 +112,7 @@ A transformer-based object detector was fine-tuned using multiple strategies.
 ### Fine-Tuning Experiments
 
 | Strategy | Description |
-|---|---|
+|||
 | Full Fine-Tuning | Entire model updated |
 | Decoder-Only | Only decoder updated |
 | Encoder-Only | Only encoder updated |
@@ -122,7 +122,7 @@ A transformer-based object detector was fine-tuned using multiple strategies.
 - qualitative bounding-box analysis
 - training stability comparison
 
----
+
 
 ## 3. Grounding DINO (Open-Vocabulary)
 
@@ -139,7 +139,7 @@ Grounding DINO was evaluated in a zero-shot perception setting.
 car, person, bicycle, motorcycle, bus, truck
 ```
 
----
+
 
 # Experiments
 
@@ -149,7 +149,7 @@ car, person, bicycle, motorcycle, bus, truck
 bash scripts/train_yolo.sh <dataset_root> <save_path>
 ```
 
----
+
 
 ## Deformable DETR Training
 
@@ -162,7 +162,7 @@ Where:
 - `2` → decoder-only
 - `3` → encoder-only
 
----
+
 
 ## Grounding DINO Inference
 
@@ -170,7 +170,7 @@ Where:
 bash scripts/grounding_dino.sh <image_dir> <model_path> <output_json>
 ```
 
----
+
 
 # Results
 
@@ -180,7 +180,7 @@ bash scripts/grounding_dino.sh <image_dir> <model_path> <output_json>
   <img src="assets/detections/yolo_results.png" width="800"/>
 </p>
 
----
+
 
 ## Grounding DINO Zero-Shot Results
 
@@ -196,7 +196,7 @@ bash scripts/grounding_dino.sh <image_dir> <model_path> <output_json>
   <img src="assets/detections/zero_shot_results_3.png" width="750"/>
 </p>
 
----
+
 
 # Training Curves
 
@@ -206,7 +206,7 @@ bash scripts/grounding_dino.sh <image_dir> <model_path> <output_json>
   <img src="assets/training_curves/full_model_finetuning.png" width="650"/>
 </p>
 
----
+
 
 ## Decoder-Only Fine-Tuning
 
@@ -214,7 +214,7 @@ bash scripts/grounding_dino.sh <image_dir> <model_path> <output_json>
   <img src="assets/training_curves/decoder_only_finetuning.png" width="650"/>
 </p>
 
----
+
 
 ## Encoder-Only Fine-Tuning
 
@@ -222,18 +222,18 @@ bash scripts/grounding_dino.sh <image_dir> <model_path> <output_json>
   <img src="assets/training_curves/encoder_only_finetuning.png" width="650"/>
 </p>
 
----
+
 
 # Quantitative Results
 
 | Model | Paradigm | mAP |
-|---|---|---|
+||||
 | Pretrained Deformable DETR | Transformer | 0.0445 |
 | Full Fine-Tuned DETR | Transformer | 0.0037 |
 | Decoder-Only DETR | Transformer | 0.0002 |
 | Encoder-Only DETR | Transformer | 0.0003 |
 
----
+
 
 # Key Observations
 
@@ -242,7 +242,7 @@ bash scripts/grounding_dino.sh <image_dir> <model_path> <output_json>
 - Grounding DINO demonstrated promising open-vocabulary robustness despite zero-shot inference.
 - YOLO provided a strong practical baseline with stable detections and efficient inference.
 
----
+
 
 # Installation
 
@@ -253,7 +253,7 @@ git clone <your_repo_url>
 cd foggy-perception-benchmark
 ```
 
----
+
 
 ## Install Dependencies
 
@@ -261,7 +261,7 @@ cd foggy-perception-benchmark
 pip install -r requirements.txt
 ```
 
----
+
 
 # Requirements
 
@@ -274,7 +274,7 @@ Core dependencies:
 - pycocotools
 - albumentations
 
----
+
 
 # Future Work
 
@@ -285,7 +285,7 @@ Core dependencies:
 - temporal perception consistency
 - perception robustness benchmarking
 
----
+
 
 # Acknowledgements
 
