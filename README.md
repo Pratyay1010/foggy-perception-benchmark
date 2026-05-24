@@ -249,7 +249,7 @@ bash scripts/grounding_dino.sh <image_dir> <model_path> <output_json>
 ## Clone Repository
 
 ```bash
-git clone <your_repo_url>
+git clone https://github.com/Pratyay1010/foggy-perception-benchmark.git
 cd foggy-perception-benchmark
 ```
 
