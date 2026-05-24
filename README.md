@@ -29,11 +29,10 @@ This repository benchmarks multiple modern object detection approaches on the Fo
 The project is structured as a progressive perception pipeline:
 
 | Stage | Method | Paradigm |
-||||
+|---|---|---|
 | Stage 1 | YOLO | CNN-based Detection |
 | Stage 2 | Deformable DETR | Transformer-based Detection |
 | Stage 3 | Grounding DINO | Open-Vocabulary Detection |
-
 
 
 # Repository Structure
@@ -112,7 +111,7 @@ A transformer-based object detector was fine-tuned using multiple strategies.
 ### Fine-Tuning Experiments
 
 | Strategy | Description |
-|||
+|---|---|
 | Full Fine-Tuning | Entire model updated |
 | Decoder-Only | Only decoder updated |
 | Encoder-Only | Only encoder updated |
@@ -227,12 +226,11 @@ bash scripts/grounding_dino.sh <image_dir> <model_path> <output_json>
 # Quantitative Results
 
 | Model | Paradigm | mAP |
-||||
+|---|---|---|
 | Pretrained Deformable DETR | Transformer | 0.0445 |
 | Full Fine-Tuned DETR | Transformer | 0.0037 |
 | Decoder-Only DETR | Transformer | 0.0002 |
 | Encoder-Only DETR | Transformer | 0.0003 |
-
 
 
 # Key Observations
